@@ -44,6 +44,9 @@ MIN_PRICE = 0.00001
 MAX_PRICE = 9999999.99999
 
 # Shrinkage: weight on the recent median, and how many trailing closes form it.
+# The window is 15 one-minute closes -- one quarter-hour -- long enough to average
+# out single-print noise, short enough that the level it estimates is still the
+# checkpoint's own level rather than an older regime.
 MEDIAN_WEIGHT = 0.25
 MEDIAN_WINDOW = 15
 
